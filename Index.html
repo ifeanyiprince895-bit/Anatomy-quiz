@@ -1,0 +1,134 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<html>
+  <h1>
+    Bones of the upper limb
+  </h1>
+  <p>
+    The bones of the upper limb are:
+   humerus 
+    radius 
+    ulna
+  </p>
+  <p class="important ">Read this</p>
+  <script>
+  let organ = "lungs";
+  let totalBones = 206;
+  let isLongest = true;
+
+  document.write("Organ: " + organ + "<br>");
+  document.write("Total bones: " + totalBones + "<br>");
+  document.write("Is it the longest? " + isLongest);
+  </script><br>
+
+  <script>
+  let heartRate = 75;
+
+  if (heartRate > 100) {
+    document.write("Tachycardia");
+  } else if (heartRate < 60) {
+    document.write("Bradycardia");
+  } else {
+    document.write("Normal");
+  } 
+  </script><br>
+
+  <script>
+  for (let rib = 1; rib <= 7; rib++) {
+    document.write("Rib pair " + rib + "<br>");
+  }
+  </script>
+
+  <script>
+  for (let i = 2; i <= 10; i += 2) {
+    document.write(i + "<br>");
+  }
+  </script>
+
+  <script>
+  function describe(bone) {
+    document.write("The " + bone + " is a bone.<br>");
+  }
+
+  describe("femur");
+  describe("humerus");
+  describe("Tibia")
+  </script>
+
+  <script>
+  let bones = ["femur", "tibia", "humerus", "radius"];
+    bones.push("ulna")
+
+  for (let i = 0; i < bones.length; i++) {
+    document.write(bones[i] + "<br>");
+  }
+  </script>
+
+  <script>
+  let patient = {
+    name: "Ada",
+    age: 30,
+    isAdmitted: true
+  };
+
+  document.write(patient.name + "<br>");
+  document.write(patient.age);
+  </script>
+  <p id="demo">Original text</p>
+
+<script>
+  document.getElementById("demo").innerHTML = "Changed by prince!";
+</script>
+
+  <h1 id="title">Old</h1>
+
+<script>
+  document.getElementById("title").innerHTML = "New";
+</script>
+
+<button onclick="showAnswer()">Longest bone?</button>
+<p id="answer"></p>
+
+<script>
+  function showAnswer() {
+    document.getElementById("answer").innerHTML = "The femur";
+  }
+</script>
+
+  <input id="nameBox" placeholder="Type your name">
+<button onclick="greet()">Greet</button>
+<p id="output"></p>
+
+<script>
+  function greet() {
+    let name = document.getElementById("nameBox").value;
+    document.getElementById("output").innerHTML = "Welcome, " + name;
+  }
+</script>
+
+  <button onclick="showDone()">Tap</button>
+<button onclick="clearMsg()">Tap to Clear</button>
+<p id="msg"></p>
+
+<script>
+  function showDone() {
+    document.getElementById("msg").innerHTML = "Done";
+  }
+
+  function clearMsg() {
+    document.getElementById("msg").innerHTML = "";
+  }
+</script>
+
+  <p id="result">Loading...</p>
+
+<script>
+  fetch("https://jsonplaceholder.typicode.com/todos/2")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("result").innerHTML = data.title;
+    });
+</script>
+</html>
